@@ -14,22 +14,27 @@ int main(){
     {
         printf("%c", First_name[i]); 
     }
-    printf("\n********************************************************************\n");
+    // make all the letter in the first name upper case letters
+    printf("\nThe Upper case letters are: %s\n", strupr(First_name));
+    // make all the letter lower case in my first name
+    printf("The lower case letters are: %s\n", strlwr(First_name));
+    printf("When you reverse my name it gives: %s\n", strrev(First_name));
     // Let's use the same variable and print it using the string identifier
-    printf("My first name is: %s\n", First_name);
+    printf("My first name is: %s\n", strupr(strrev(First_name)));
     printf("********************************************************************\n");
     // We can access the position of the first apperance of a character in a string  using the strchr fucntion
     /* 
     strchr(s1, ch);  Returns a pointer to the first occurrence of character ch in string s1.
     */
-
     printf("The return pointer is:  %d\n", strchr(First_name, 'c')); // this returns the pointer that hold the character and can be dereference as bellow
-    printf("This is the character held by the pointer after derefencing it: %c\n", *strchr(First_name, 'c'));
+    printf("This is the character held by the pointer after derefencing it: %c\n", *strchr(First_name, 'C'));
+    
     printf("********************************************************************\n");
     // We can concatinate two strings using the strcat function 
     char Last_name[] = " BAMAMOU";
   
     printf("Afer concatinating both string: %s\n", strcat(First_name, Last_name)); // Concatination is like additio of string in C
+   // printf("the number of character in %s is: %d \n", strcat(First_name, Last_name), strlen("NicolasBamamou"));
     
     printf("********************************************************************\n");
     // we can use the c get() to get input function from user just as in C and we use the puts function to display user input
@@ -48,7 +53,7 @@ int main(){
     // Now let's take some string inputs from the users user scanf
     char Input[100];                   // initalize the variable 
     printf("Enter another string: ");       // a promt for the user input or enter the string
-    scanf("%[^\n]s", Input);         //  Keep scaniing untill you you see the null charater in inside the arry of character from the user
+    scanf("[^\n]%s", Input);         //  Keep scaniing untill you you see the null charater in inside the arry of character from the user
     printf("You entered: %s\n", Input);
     
     printf("********************************************************************\n");
