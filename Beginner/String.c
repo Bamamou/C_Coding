@@ -32,10 +32,31 @@ int main(){
     printf("Afer concatinating both string: %s\n", strcat(First_name, Last_name)); // Concatination is like additio of string in C
     
     printf("********************************************************************\n");
-    // Now let's take some string inputs from the users
+    // we can use the c get() to get input function from user just as in C and we use the puts function to display user input
+    char Get_input[100];
+    printf("Enter a string: ");
+    gets(Get_input);
+    printf("You entered: ");
+    puts(Get_input);
+    printf("********************************************************************\n");
+    //Now let's pass some string as user input
+    char *Point_char ;
+    printf("Enter a new string: ");
+    gets(Point_char);                 // no need to dereference even when printing
+    printf("This is what you entered: %s \n", Point_char);
+    printf("********************************************************************\n");
+    // Now let's take some string inputs from the users user scanf
     char Input[100];                   // initalize the variable 
-    printf("Enter a string: ");       // a promt for the user input or enter the string
+    printf("Enter another string: ");       // a promt for the user input or enter the string
     scanf("%[^\n]s", Input);         //  Keep scaniing untill you you see the null charater in inside the arry of character from the user
-    printf("You entered: %s", Input);
+    printf("You entered: %s\n", Input);
+    
+    printf("********************************************************************\n");
+    // Now let's use pointers with some string and see how you can use char without needing to define their size.
+    char *String_pointer = "This is first string pointer";  // note you don't need to specify the length or size of the string in this case
+    printf("%s \n", String_pointer);                          // note you also don't need to dereference as it should be in CPP 
+
+
+
     return 0;
 }
