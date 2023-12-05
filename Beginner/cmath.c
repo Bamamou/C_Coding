@@ -9,7 +9,7 @@
 int main(){
     double number;
     printf("Enter a number: ");
-    scanf("%lf", &number);
-    printf("the squart root of entered number is: %lf",sqrt(number));
+    scanf("%lf",  &number);
+    printf("The squart root of %lf is:  %lf", number, sqrt(number));
     return 0;
 }
